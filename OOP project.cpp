@@ -9,6 +9,9 @@ class Character
     string name;
     
     public:
+
+    Character(int chHp=1000,int chDmg=50,string chName=""): hp(chHp), dmg(chDmg), mana(chHp), spelldmg(chDmg*4), name(chName) {}
+
     //getter i setter dla hp
     int get_hp() const{return hp;}
     void set_hp(int newHp) {hp=newHp;}
@@ -31,26 +34,24 @@ class Character
 
     //metody klasy
     virtual void attack()=0;
-    virtual void deffense()=0;
+    virtual void defense()=0;
 };
 
 class Mage:public Character
 {
-    int mageHp,mageDmg,mageMana,mageSpelldmg;
+    int mageHp, mageDmg, mageMana, mageSpelldmg;
     string mageName;
 
     public:
-    Mage(int mageHp=1000,int mageDmg=50,int mageMana=1000,int mageSpelldmg=500,string mageName="mage")
-    {
-        get_dmg()
-    }
+    Mage(int mageHp, int mageDmg, int mageMana, int mageSpelldmg, string mageName = "mage") : Character(mageHp, mageDmg, mageMana, mageSpelldmg), mageHp(mageHp), mageDmg(mageDmg), mageMana(mageMana), mageSpelldmg(mageSpelldmg), mageName(mageName) {}
+    
 
     void attack() override
     {
-        cout<<this->name<<" is doing fire ball for "<<mana/2<<" damage"<<endl;
+        cout<<mageName<<" is doing fire ball for "<<mageSpelldmg<<" damage"<<endl;
     }
 
-    void deffense() override
+    void defense() override
     {
         cout<<"nothing happens here"<<endl;
     }
@@ -60,12 +61,23 @@ class Mage:public Character
 
 class Worrior:public Character
 {
-
+    public:
+    void attack() override = 0;
+    void defense() override = 0;
 };  
 
 class Archer:public Character
 {
+    public:
+    void attack() override = 0;
+    void defense() override = 0;
+};
 
+class Palladin:public Character
+{
+    public:
+    void attack() override = 0;
+    void defense() override = 0;
 };
 
 int main()
