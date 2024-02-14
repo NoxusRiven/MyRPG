@@ -7,8 +7,8 @@ pallSpelldmg = get_spelldmg();
 name = "Palladin";
 }
 void Palladin::attack(){
-// Implementacja ataku
+    cout<<this->name<<endl;
 }
 void Palladin::defense(){
-// Implementacja obrony
+    cout<<this->name<<endl;
 }

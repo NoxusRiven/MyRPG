@@ -5,8 +5,9 @@ worDmg = get_dmg() * 3;
 name = "Worrior";
 }
 void Worrior::attack(){
-// Implementacja ataku
+    cout<<this->name<<endl;
 }
-void Worrior::defense(){
-// Implementacja obrony
+void Worrior::defense()
+{
+    cout<<0<<endl;
 }

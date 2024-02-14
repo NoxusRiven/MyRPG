@@ -10,11 +10,11 @@ Mage::Mage(): Character()
 
 void Mage::attack()
 {
-// Implementacja ataku
+cout<<this->name<<endl;
 }
 
 void Mage::defense()
 {
-// Implementacja obrony
+cout<<this->name<<endl;
 }
 
