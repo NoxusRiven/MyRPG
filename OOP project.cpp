@@ -5,32 +5,27 @@ using namespace std;
 class Character
 {
     //prywatne atrybuty klasy
-    int hp,dmg,mana,spelldmg;
+    int hp, dmg, mana, spelldmg;
     string name;
     
     public:
+    Character(int chHp = 1000, int chDmg = 50, string chName = "") : hp(chHp), dmg(chDmg), mana(chHp), spelldmg(chDmg * 4), name(chName) {}
 
-    Character(int chHp=1000,int chDmg=50,string chName=""): hp(chHp), dmg(chDmg), mana(chHp), spelldmg(chDmg*4), name(chName) {}
+    //gettery i settery po to zeby klasy mialy dostep do danych
+    int get_hp() const { return hp; }
+    void set_hp(int newHp) { hp = newHp; }
 
-    //getter i setter dla hp
-    int get_hp() const{return hp;}
-    void set_hp(int newHp) {hp=newHp;}
+    int get_dmg() const { return dmg; }
+    void set_dmg(int newDmg) { dmg = newDmg; }
 
-    //getter i setter dla dmg
-    int get_dmg() const{return dmg;}
-    void set_dmg(int newDmg) {dmg=newDmg;}
+    int get_mana() const { return mana; }
+    void set_mana(int newMana) { mana = newMana; }
 
-    //getter i setter dla mana
-    int get_mana() const{return mana;}
-    void set_mana(int newMana) {mana=newMana;}
+    int get_spelldmg() const { return spelldmg; }
+    void set_spelldmg(int newSpelldmg) { spelldmg = newSpelldmg; }
 
-    //getter i setter dla spelldmg
-    int get_spelldmg() const{return spelldmg;}
-    void set_spelldmg(int newSpelldmg) {spelldmg=newSpelldmg;}
-
-    //getter i setter dla name
-    string get_name() const{return name;}
-    void set_name(string newName) {name=newName;}
+    string get_name() const { return name; }
+    void set_name(string newName) { name = newName; }
 
     //metody klasy
     virtual void attack()=0;
@@ -43,12 +38,24 @@ class Mage:public Character
     string mageName;
 
     public:
-    Mage(int mageHp, int mageDmg, int mageMana, int mageSpelldmg, string mageName = "mage") : Character(mageHp, mageDmg, mageMana, mageSpelldmg), mageHp(mageHp), mageDmg(mageDmg), mageMana(mageMana), mageSpelldmg(mageSpelldmg), mageName(mageName) {}
+    Mage() : Character() 
+    {
+        mageHp = get_hp(); //1000
+        mageDmg = get_dmg(); //50
+        mageMana = get_mana(); //1000
+        mageSpelldmg = get_spelldmg()*2; //400 (50*4*2)
+        mageName = "mage"; // mage
+    }
     
 
     void attack() override
     {
-        cout<<mageName<<" is doing fire ball for "<<mageSpelldmg<<" damage"<<endl;
+        //cout<<mageName<<" is doing fire ball for "<<mageSpelldmg<<" damage"<<endl;
+        cout<<"mage HP: "<<mageHp<<endl;
+        cout<<"mage DMG: "<<mageDmg<<endl;
+        cout<<"mage mana: "<<mageMana<<endl;
+        cout<<"mage spellDMG: "<<mageSpelldmg<<endl;
+        cout<<"mage name: "<<mageName<<endl;
     }
 
     void defense() override
