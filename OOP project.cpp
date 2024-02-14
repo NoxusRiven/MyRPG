@@ -35,27 +35,26 @@ class Character
 class Mage:public Character
 {
     int mageHp, mageDmg, mageMana, mageSpelldmg;
-    string mageName;
+    string name;
 
     public:
-    Mage() : Character() 
+    Mage():Character() 
     {
-        mageHp = get_hp(); //1000
-        mageDmg = get_dmg(); //50
-        mageMana = get_mana(); //1000
-        mageSpelldmg = get_spelldmg()*2; //400 (50*4*2)
-        mageName = "mage"; // mage
+        mageHp = get_hp();
+        mageDmg = get_dmg(); 
+        mageMana = get_mana();
+        mageSpelldmg = get_spelldmg()*2;
+        name = "Mage";
     }
     
 
     void attack() override
     {
-        //cout<<mageName<<" is doing fire ball for "<<mageSpelldmg<<" damage"<<endl;
-        cout<<"mage HP: "<<mageHp<<endl;
+        /*cout<<"mage HP: "<<mageHp<<endl;
         cout<<"mage DMG: "<<mageDmg<<endl;
         cout<<"mage mana: "<<mageMana<<endl;
         cout<<"mage spellDMG: "<<mageSpelldmg<<endl;
-        cout<<"mage name: "<<mageName<<endl;
+        cout<<"mage name: "<<this->name<<endl;*/
     }
 
     void defense() override
@@ -68,30 +67,104 @@ class Mage:public Character
 
 class Worrior:public Character
 {
+    int worHp, worDmg;
+    string name;
+
     public:
-    void attack() override = 0;
-    void defense() override = 0;
+    Worrior():Character() 
+    {
+        worHp = get_hp()*2;
+        worDmg = get_dmg()*3; 
+        name = "Worrior";
+    }
+    
+
+    void attack() override
+    {
+        /*cout<<"worrior HP: "<<worHp<<endl;
+        cout<<"worrior DMG: "<<worDmg<<endl;
+        cout<<"worrior name: "<<this->name<<endl;*/
+    }
+
+    void defense() override
+    {
+        cout<<"nothing happens here"<<endl;
+    }
+
 };  
 
 class Archer:public Character
 {
+    int archHp, archDmg;
+    string name;
+
     public:
-    void attack() override = 0;
-    void defense() override = 0;
+    Archer():Character() 
+    {
+        archHp = get_hp()*1.25;
+        archDmg = get_dmg()*2; 
+        name = "Archer";
+    }
+    
+
+    void attack() override
+    {
+        
+        /*cout<<"archer HP: "<<archHp<<endl;
+        cout<<"archer DMG: "<<archDmg<<endl;
+        cout<<"archer name: "<<this->name<<endl;*/
+    }
+
+    void defense() override
+    {
+        cout<<"nothing happens here"<<endl;
+    }
+
 };
 
 class Palladin:public Character
 {
+    int pallHp, pallDmg, pallMana, pallSpelldmg;
+    string name;
+
     public:
-    void attack() override = 0;
-    void defense() override = 0;
+    Palladin():Character() 
+    {
+        pallHp = get_hp()*1.75;
+        pallDmg = get_dmg()*2; 
+        pallMana = get_mana()/2;
+        pallSpelldmg = get_spelldmg();
+        name = "Palladin";
+    }
+    
+
+    void attack() override
+    {
+        /*cout<<"palladin HP: "<<pallHp<<endl;
+        cout<<"palladin  DMG: "<<pallDmg<<endl;
+        cout<<"palladin  mana: "<<pallMana<<endl;
+        cout<<"palladin  spellDMG: "<<pallSpelldmg<<endl;
+        cout<<"palladin  name: "<<this->name<<endl;*/
+    }
+
+    void defense() override
+    {
+        cout<<"nothing happens here"<<endl;
+    }
+
 };
 
 int main()
 {
     Mage mage;
+    Worrior worrior;
+    Archer archer;
+    Palladin palladin;
 
     mage.attack();
+    worrior.attack();
+    archer.attack();
+    palladin.attack();
 
     return 0;
 }
