@@ -6,12 +6,13 @@
 
 using namespace std;
 
-class Character {
-protected:
+class Character 
+{
+
     int hp, dmg, mana, spelldmg;
     string name;
 
-public:
+    public:
     Character(int chHp = 1000,int chDmg = 50,string chName = "");
 
     int get_hp() const;

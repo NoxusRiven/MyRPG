@@ -2,6 +2,8 @@
 #define ARCHER_HPP
 #include "character.hpp"
 class Archer : public Character{
+    int archHp,archDmg;
+    string name;
 public:
 Archer();
 void attack() override;

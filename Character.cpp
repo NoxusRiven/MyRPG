@@ -1,28 +1,18 @@
 #include "Character.hpp"
 
-class Character
-{
-    int hp,dmg,mana,spelldmg;
-    string name;
+Character::Character(int chHp, int chDmg, string chName) : hp(chHp), dmg(chDmg), mana(chHp), spelldmg(chDmg * 4), name(chName) {}
 
-    public:
-    Character(int chHp=1000,int chDmg=50,string chName=""):hp(chHp),dmg(chDmg),mana(chHp),spelldmg(chDmg*4),name(chName){}
+int Character::get_hp() const { return hp; }
+void Character::set_hp(int newHp) { hp = newHp; }
 
-    int get_hp()const{return hp;}
-    void set_hp(int newHp){hp=newHp;}
+int Character::get_dmg() const { return dmg; }
+void Character::set_dmg(int newDmg) { dmg = newDmg; }
 
-    int get_dmg()const{return dmg;}
-    void set_dmg(int newDmg){dmg=newDmg;}
+int Character::get_mana() const { return mana; }
+void Character::set_mana(int newMana) { mana = newMana; }
 
-    int get_mana()const{return mana;}
-    void set_mana(int newMana){mana=newMana;}
+int Character::get_spelldmg() const { return spelldmg; }
+void Character::set_spelldmg(int newSpelldmg) { spelldmg = newSpelldmg; }
 
-    int get_spelldmg()const{return spelldmg;}
-    void set_spelldmg(int newSpelldmg){spelldmg=newSpelldmg;}
-
-    string get_name()const{return name;}
-    void set_name(string newName){name=newName;}
-
-    virtual void attack()=0;
-    virtual void defense()=0;
-};
+string Character::get_name() const { return name; }
+void Character::set_name(string newName) { name = newName; }

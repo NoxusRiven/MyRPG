@@ -153,10 +153,11 @@ class Palladin:public Character
     }
 
 };*/
-#include "mage.hpp"
-#include "worrior.hpp"
-#include "archer.hpp"
-#include "palladin.hpp"
+#include "Character.hpp"
+#include "Mage.hpp"
+#include "Worrior.hpp"
+#include "Archer.hpp"
+#include "Palladin.hpp"
 
 int main()
 {

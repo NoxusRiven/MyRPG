@@ -3,11 +3,13 @@
 #include "character.hpp"
 class Mage : public Character
 {
-public:
+    int mageHp,mageDmg,mageMana,mageSpelldmg;
+    string name;
+    public:
 
-Mage();
+    Mage();
 
-void attack() override;
-void defense() override;
+    void attack() override;
+    void defense() override;
 };
 #endif

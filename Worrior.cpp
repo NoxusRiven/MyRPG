@@ -1,5 +1,6 @@
 #include "worrior.hpp"
-Worrior::Worrior(): Character(){
+Worrior::Worrior(): Character()
+{
 worHp = get_hp() * 2;
 worDmg = get_dmg() * 3;
 name = "Worrior";
