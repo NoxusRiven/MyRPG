@@ -1,0 +1,15 @@
+statystyki sa bazowane na klasie Character i modyfikowane w zaleznosci od podklasy
+
+Postacie:Mag, Wojownik, Łucznik, Palladyn
+
+TO DO:
+-wybor speli/umiejetnosci np dla maga "fireball", wojownika "knight's slash", a palladyna
+wybor spela czy umejki
+-dodanie zasiegu dla postaci (łucznik i mag powinni miec przewage ale ofc łucznik powinien
+miec wiekszy range)
+-system lvlowania? każdy lvl to jakiś mnożnik do statystyk
+-system walki
+-zabieranie many,hp (uzywanie spelli, dostawanie obrazen)
+-system zlota i zarabiania (na mobkach,innych postaciach, cokolwiek, moze jakas minigierka?)
+-itemy konsumcyjne (potki na hp, na mane, moze na dmg itp)
+-itemy zwykle, ktore beda boostowac statystyki w zaleznosci od ich mocy
