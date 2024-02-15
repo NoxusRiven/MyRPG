@@ -1,4 +1,4 @@
-#include "worrior.hpp"
+#include "Worrior.hpp"
 Worrior::Worrior(): Character()
 {
 worHp = get_hp() * 2;

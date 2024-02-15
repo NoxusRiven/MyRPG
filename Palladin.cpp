@@ -1,5 +1,6 @@
-#include "palladin.hpp"
-Palladin::Palladin(): Character(){
+#include "Palladin.hpp"
+Palladin::Palladin():Character()
+{
 pallHp = get_hp() * 1.75;
 pallDmg = get_dmg() * 2;
 pallMana = get_mana() / 2;

@@ -1,6 +1,6 @@
 #ifndef MAGE_HPP
 #define MAGE_HPP
-#include "character.hpp"
+#include "Character.cpp"
 class Mage : public Character
 {
     int mageHp,mageDmg,mageMana,mageSpelldmg;

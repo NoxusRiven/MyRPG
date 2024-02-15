@@ -1,6 +1,6 @@
 #ifndef ARCHER_HPP
 #define ARCHER_HPP
-#include "character.hpp"
+#include "Character.cpp"
 class Archer : public Character{
     int archHp,archDmg;
     string name;

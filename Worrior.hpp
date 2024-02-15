@@ -1,6 +1,6 @@
 #ifndef WORRIOR_HPP
 #define WORRIOR_HPP
-#include "character.hpp"
+#include "Character.cpp"
 class Worrior : public Character
 {
     int worHp,worDmg;

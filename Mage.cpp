@@ -1,4 +1,4 @@
-#include "mage.hpp"
+#include "Mage.hpp"
 Mage::Mage(): Character()
 {
     mageHp=get_hp();

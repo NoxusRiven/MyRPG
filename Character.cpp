@@ -1,18 +1,37 @@
-#include "Character.hpp"
+#ifndef CHARACTER_HPP
+#define CHARACTER_HPP
 
-Character::Character(int chHp, int chDmg, string chName) : hp(chHp), dmg(chDmg), mana(chHp), spelldmg(chDmg * 4), name(chName) {}
+#include <iostream>
+#include <string>
 
-int Character::get_hp() const { return hp; }
-void Character::set_hp(int newHp) { hp = newHp; }
+using namespace std;
 
-int Character::get_dmg() const { return dmg; }
-void Character::set_dmg(int newDmg) { dmg = newDmg; }
+class Character {
+private:
+    int hp, dmg, mana, spelldmg;
+    string name;
 
-int Character::get_mana() const { return mana; }
-void Character::set_mana(int newMana) { mana = newMana; }
+public:
+    Character(int chHp = 1000, int chDmg = 50, std::string chName = "")
+        : hp(chHp), dmg(chDmg), mana(chHp), spelldmg(chDmg * 4), name(chName) {}
 
-int Character::get_spelldmg() const { return spelldmg; }
-void Character::set_spelldmg(int newSpelldmg) { spelldmg = newSpelldmg; }
+    int get_hp() const { return hp; }
+    void set_hp(int newHp) { hp = newHp; }
 
-string Character::get_name() const { return name; }
-void Character::set_name(string newName) { name = newName; }
+    int get_dmg() const { return dmg; }
+    void set_dmg(int newDmg) { dmg = newDmg; }
+
+    int get_mana() const { return mana; }
+    void set_mana(int newMana) { mana = newMana; }
+
+    int get_spelldmg() const { return spelldmg; }
+    void set_spelldmg(int newSpelldmg) { spelldmg = newSpelldmg; }
+
+    std::string get_name() const { return name; }
+    void set_name(std::string newName) { name = newName; }
+
+    virtual void attack() = 0;
+    virtual void defense() = 0;
+};
+
+#endif

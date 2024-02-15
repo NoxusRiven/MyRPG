@@ -7,7 +7,7 @@ class Character
     //prywatne atrybuty klasy
     int hp,dmg,mana,spelldmg;
     string name;
-    
+
     public:
     Character(int chHp=1000,int chDmg=50,string chName=""):hp(chHp),dmg(chDmg),mana(chHp),spelldmg(chDmg * 4),name(chName){}
 
@@ -38,15 +38,15 @@ class Mage:public Character
     string name;
 
     public:
-    Mage():Character() 
+    Mage():Character()
     {
         mageHp=get_hp();
-        mageDmg=get_dmg(); 
+        mageDmg=get_dmg();
         mageMana=get_mana();
         mageSpelldmg=get_spelldmg()*2;
         name="Mage";
     }
-    
+
 
     void attack()override
     {
@@ -71,13 +71,13 @@ class Worrior:public Character
     string name;
 
     public:
-    Worrior():Character() 
+    Worrior():Character()
     {
         worHp=get_hp()*2;
-        worDmg=get_dmg()*3; 
+        worDmg=get_dmg()*3;
         name="Worrior";
     }
-    
+
 
     void attack()override
     {
@@ -91,7 +91,7 @@ class Worrior:public Character
         cout<<"nothing happens here"<<endl;
     }
 
-};  
+};
 
 class Archer:public Character
 {
@@ -99,17 +99,17 @@ class Archer:public Character
     string name;
 
     public:
-    Archer():Character() 
+    Archer():Character()
     {
         archHp=get_hp()*1.25;
-        archDmg=get_dmg()*2; 
+        archDmg=get_dmg()*2;
         name="Archer";
     }
-    
+
 
     void attack()override
     {
-        
+
         /*cout<<"archer HP: "<<archHp<<endl;
         cout<<"archer DMG: "<<archDmg<<endl;
         cout<<"archer name: "<<this->name<<endl;
@@ -128,15 +128,15 @@ class Palladin:public Character
     string name;
 
     public:
-    Palladin():Character() 
+    Palladin():Character()
     {
         pallHp=get_hp()*1.75;
-        pallDmg=get_dmg()*2; 
+        pallDmg=get_dmg()*2;
         pallMana=get_mana()/2;
         pallSpelldmg=get_spelldmg();
         name="Palladin";
     }
-    
+
 
     void attack()override
     {
@@ -153,11 +153,10 @@ class Palladin:public Character
     }
 
 };*/
-#include "Character.hpp"
-#include "Mage.hpp"
-#include "Worrior.hpp"
-#include "Archer.hpp"
-#include "Palladin.hpp"
+#include "Mage.cpp"
+#include "Worrior.cpp"
+#include "Archer.cpp"
+#include "Palladin.cpp"
 
 int main()
 {
