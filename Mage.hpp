@@ -1,12 +1,14 @@
 #ifndef MAGE_HPP
 #define MAGE_HPP
+
 #include "Character.cpp"
-class Mage : public Character
+
+class Mage:public Character
 {
     int mageHp,mageDmg,mageMana,mageSpelldmg;
     string name;
-    public:
 
+    public:
     Mage();
 
     void attack() override;
